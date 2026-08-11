@@ -11,151 +11,412 @@
 margin: 0;
 padding: 0;
 box-sizing: border-box;
-font-family: Arial, sans-serif;
 }
 
 body {
-background: #fff9f7;
-color: #3d3030;
+font-family: Arial, Helvetica, sans-serif;
+background: #faf8f5;
+color: #262323;
 }
 
+a {
+text-decoration: none;
+color: inherit;
+}
+
+/* TOPO */
+
 header {
-background: #f4d9d9;
-padding: 25px 20px;
-text-align: center;
+background: #faf8f5;
+border-bottom: 1px solid #e7e1dc;
+position: sticky;
+top: 0;
+z-index: 100;
+}
+
+.topo {
+max-width: 1200px;
+margin: auto;
+height: 82px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 0 25px;
 }
 
 .logo {
-font-size: 28px;
+font-family: Georgia, serif;
+font-size: 25px;
+letter-spacing: 1px;
 font-weight: bold;
-color: #b85c72;
+}
+
+.logo span {
+color: #c9798d;
+}
+
+nav {
+display: flex;
+gap: 30px;
+font-size: 13px;
+text-transform: uppercase;
 letter-spacing: 1px;
 }
 
-.fogo {
-font-size: 30px;
+nav a:hover {
+color: #c9798d;
 }
 
-.slogan {
-margin-top: 8px;
-font-size: 14px;
-color: #6e5058;
+.whatsapp-topo {
+border: 1px solid #262323;
+padding: 11px 18px;
+font-size: 12px;
+text-transform: uppercase;
+letter-spacing: 1px;
 }
 
-.hero {
+.whatsapp-topo:hover {
+background: #262323;
+color: white;
+}
+
+/* BANNER */
+
+.banner {
+min-height: 570px;
+background:
+linear-gradient(
+rgba(40, 30, 30, 0.20),
+rgba(40, 30, 30, 0.20)
+),
+linear-gradient(120deg, #ead7d7, #f7eeee);
+display: flex;
+align-items: center;
+justify-content: center;
 text-align: center;
-padding: 55px 20px;
-background: #fff;
+padding: 50px 20px;
 }
 
-.hero h1 {
-font-size: 34px;
-color: #b85c72;
-margin-bottom: 12px;
+.banner-conteudo {
+max-width: 700px;
 }
 
-.hero p {
-font-size: 16px;
-color: #665555;
-margin-bottom: 25px;
+.banner small {
+text-transform: uppercase;
+letter-spacing: 4px;
+font-size: 12px;
+}
+
+.banner h1 {
+font-family: Georgia, serif;
+font-size: clamp(42px, 7vw, 78px);
+font-weight: normal;
+margin: 18px 0;
+}
+
+.banner p {
+font-size: 17px;
+letter-spacing: 1px;
+margin-bottom: 32px;
 }
 
 .botao {
 display: inline-block;
-background: #b85c72;
+background: #262323;
 color: white;
-text-decoration: none;
-padding: 14px 25px;
-border-radius: 30px;
-font-weight: bold;
+padding: 15px 32px;
+text-transform: uppercase;
+font-size: 12px;
+letter-spacing: 2px;
 }
 
 .botao:hover {
-opacity: 0.9;
+background: #c9798d;
 }
+
+/* CATEGORIAS */
+
+.categorias {
+max-width: 1200px;
+margin: 0 auto;
+padding: 55px 25px 20px;
+}
+
+.titulo-secao {
+text-align: center;
+margin-bottom: 35px;
+}
+
+.titulo-secao small {
+text-transform: uppercase;
+letter-spacing: 3px;
+font-size: 11px;
+color: #9a777f;
+}
+
+.titulo-secao h2 {
+font-family: Georgia, serif;
+font-size: 34px;
+font-weight: normal;
+margin-top: 8px;
+}
+
+.categorias-grid {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+gap: 12px;
+}
+
+.categoria {
+height: 170px;
+background: #ead8da;
+display: flex;
+align-items: end;
+padding: 22px;
+position: relative;
+overflow: hidden;
+}
+
+.categoria:nth-child(2) {
+background: #ded5cd;
+}
+
+.categoria:nth-child(3) {
+background: #e7dfe0;
+}
+
+.categoria:nth-child(4) {
+background: #d9d1cc;
+}
+
+.categoria h3 {
+font-family: Georgia, serif;
+font-size: 24px;
+font-weight: normal;
+position: relative;
+z-index: 2;
+}
+
+/* PRODUTOS */
 
 .produtos {
-padding: 40px 20px;
-max-width: 1100px;
+max-width: 1200px;
 margin: auto;
+padding: 70px 25px;
 }
 
-.titulo {
-text-align: center;
-color: #b85c72;
-font-size: 27px;
-margin-bottom: 30px;
-}
-
-.grid {
+.produtos-grid {
 display: grid;
-grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-gap: 20px;
+grid-template-columns: repeat(4, 1fr);
+gap: 25px;
 }
 
 .produto {
 background: white;
-border-radius: 18px;
-padding: 18px;
-text-align: center;
-box-shadow: 0 5px 20px rgba(100, 50, 60, 0.08);
+overflow: hidden;
 }
 
-.foto {
-height: 240px;
-background: #f3e2e2;
-border-radius: 14px;
+.produto-imagem {
+height: 350px;
+background: #eee7e3;
 display: flex;
 align-items: center;
 justify-content: center;
-font-size: 45px;
-margin-bottom: 15px;
+color: #8c8580;
+font-size: 12px;
+text-transform: uppercase;
+letter-spacing: 1px;
 }
 
-.produto h3 {
+.produto-info {
+padding: 18px 5px 22px;
+}
+
+.produto-nome {
+font-family: Georgia, serif;
+font-size: 17px;
 margin-bottom: 8px;
-font-size: 18px;
 }
 
-.preco {
-color: #b85c72;
-font-size: 20px;
+.produto-preco {
+font-size: 15px;
 font-weight: bold;
 margin-bottom: 15px;
 }
 
 .comprar {
 display: block;
-background: #b85c72;
-color: white;
-padding: 11px;
-border-radius: 25px;
-text-decoration: none;
-font-weight: bold;
-}
-
-.info {
-background: #f4d9d9;
-padding: 35px 20px;
+border: 1px solid #262323;
 text-align: center;
-margin-top: 30px;
+padding: 11px;
+font-size: 11px;
+text-transform: uppercase;
+letter-spacing: 1.5px;
 }
 
-.info h2 {
-color: #b85c72;
-margin-bottom: 20px;
+.comprar:hover {
+background: #262323;
+color: white;
+}
+
+/* FRASE */
+
+.frase {
+background: #e8d5d8;
+text-align: center;
+padding: 90px 20px;
+}
+
+.frase h2 {
+font-family: Georgia, serif;
+font-size: clamp(32px, 5vw, 55px);
+font-weight: normal;
+}
+
+.frase p {
+margin-top: 15px;
+font-size: 14px;
+letter-spacing: 1px;
+}
+
+/* INFORMAÇÕES */
+
+.informacoes {
+max-width: 1100px;
+margin: auto;
+padding: 65px 25px;
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 40px;
+text-align: center;
+}
+
+.info h3 {
+font-family: Georgia, serif;
+font-size: 20px;
+font-weight: normal;
+margin-bottom: 10px;
 }
 
 .info p {
-margin: 10px 0;
+color: #6d6865;
+font-size: 13px;
+line-height: 1.6;
 }
 
+/* RODAPÉ */
+
 footer {
-text-align: center;
-padding: 25px;
-background: #3d3030;
+background: #262323;
 color: white;
-font-size: 13px;
+text-align: center;
+padding: 50px 20px;
+}
+
+footer h2 {
+font-family: Georgia, serif;
+font-weight: normal;
+font-size: 25px;
+}
+
+footer p {
+margin-top: 12px;
+color: #d5d0ce;
+font-size: 12px;
+}
+
+.instagram {
+display: inline-block;
+margin-top: 25px;
+border-bottom: 1px solid white;
+padding-bottom: 5px;
+font-size: 12px;
+text-transform: uppercase;
+letter-spacing: 1px;
+}
+
+/* CELULAR */
+
+@media (max-width: 800px) {
+
+.topo {
+height: 70px;
+padding: 0 17px;
+}
+
+.logo {
+font-size: 19px;
+}
+
+nav {
+display: none;
+}
+
+.whatsapp-topo {
+padding: 9px 12px;
+font-size: 10px;
+}
+
+.banner {
+min-height: 500px;
+}
+
+.banner h1 {
+font-size: 45px;
+}
+
+.banner p {
+font-size: 14px;
+}
+
+.categorias-grid {
+grid-template-columns: repeat(2, 1fr);
+}
+
+.categoria {
+height: 140px;
+}
+
+.produtos-grid {
+grid-template-columns: repeat(2, 1fr);
+gap: 16px;
+}
+
+.produto-imagem {
+height: 250px;
+}
+
+.produto-nome {
+font-size: 15px;
+}
+
+.informacoes {
+grid-template-columns: 1fr;
+gap: 35px;
+}
+
+.frase {
+padding: 70px 20px;
+}
+}
+
+@media (max-width: 450px) {
+
+.produto-imagem {
+height: 220px;
+}
+
+.categorias {
+padding-top: 40px;
+}
+
+.produtos {
+padding-top: 50px;
+}
+
+.titulo-secao h2 {
+font-size: 29px;
+}
 }
 </style>
 </head>
@@ -163,123 +424,337 @@ font-size: 13px;
 <body>
 
 <header>
-<div class="logo">
-🔥 Use Giovanna Sabino
-</div>
-<div class="slogan">
-Vista seu poder.
+<div class="topo">
+
+<a href="#" class="logo">
+USE <span>GIOVANNA</span> SABINO
+</a>
+
+<nav>
+<a href="#inicio">Início</a>
+<a href="#novidades">Novidades</a>
+<a href="#categorias">Categorias</a>
+<a href="#destaques">Destaques</a>
+</nav>
+
+<a
+href="https://wa.me/SEU_NUMERO_AQUI"
+class="whatsapp-topo"
+target="_blank">
+WhatsApp
+</a>
+
 </div>
 </header>
 
-<section class="hero">
-<h1>Vista seu poder ✨</h1>
+
+<main>
+
+<section class="banner" id="inicio">
+
+<div class="banner-conteudo">
+
+<small>Use Giovanna Sabino</small>
+
+<h1>Vista seu poder.</h1>
 
 <p>
-Peças femininas para você se sentir linda, confiante e poderosa.
+Moda feminina para mulheres que gostam de se sentir incríveis.
 </p>
 
-<a class="botao" href="#produtos">
-Ver produtos
+<a href="#novidades" class="botao">
+Ver novidades
 </a>
+
+</div>
+
 </section>
 
-<section class="produtos" id="produtos">
 
-<h2 class="titulo">✨ Nossos queridinhos</h2>
+<section class="categorias" id="categorias">
 
-<div class="grid">
+<div class="titulo-secao">
+<small>Encontre seu estilo</small>
+<h2>Compre por categoria</h2>
+</div>
 
-<div class="produto">
-<div class="foto">🤍</div>
-<h3>Top Tube</h3>
-<div class="preco">R$ 39,90</div>
+<div class="categorias-grid">
 
-<a class="comprar"
-href="https://wa.me/5534992834995?text=Olá!%20Tenho%20interesse%20no%20Top%20Tube%20da%20Use%20Giovanna%20Sabino."
-target="_blank">
-Comprar pelo WhatsApp
+<a href="#destaques" class="categoria">
+<h3>Croppeds</h3>
 </a>
-</div>
 
-<div class="produto">
-<div class="foto">🩷</div>
-<h3>Cropped Manga Nula</h3>
-<div class="preco">R$ 44,90</div>
-
-<a class="comprar"
-href="https://wa.me/5534992834995?text=Olá!%20Tenho%20interesse%20no%20Cropped%20Manga%20Nula."
-target="_blank">
-Comprar pelo WhatsApp
+<a href="#destaques" class="categoria">
+<h3>Tops</h3>
 </a>
-</div>
 
-<div class="produto">
-<div class="foto">🖤</div>
-<h3>Cropped Laila</h3>
-<div class="preco">R$ 59,90</div>
-
-<a class="comprar"
-href="https://wa.me/5534992834995?text=Olá!%20Tenho%20interesse%20no%20Cropped%20Laila."
-target="_blank">
-Comprar pelo WhatsApp
+<a href="#destaques" class="categoria">
+<h3>Regatas</h3>
 </a>
-</div>
 
-<div class="produto">
-<div class="foto">🤍</div>
-<h3>Cropped Agnes</h3>
-<div class="preco">R$ 59,99</div>
-
-<a class="comprar"
-href="https://wa.me/5534992834995?text=Olá!%20Tenho%20interesse%20no%20Cropped%20Agnes."
-target="_blank">
-Comprar pelo WhatsApp
+<a href="#destaques" class="categoria">
+<h3>Novidades</h3>
 </a>
-</div>
-
-<div class="produto">
-<div class="foto">🤎</div>
-<h3>Regata Júlia</h3>
-<div class="preco">R$ 49,99</div>
-
-<a class="comprar"
-href="https://wa.me/5534992834995?text=Olá!%20Tenho%20interesse%20na%20Regata%20Júlia."
-target="_blank">
-Comprar pelo WhatsApp
-</a>
-</div>
-
-<div class="produto">
-<div class="foto">✨</div>
-<h3>Bata Helena</h3>
-<div class="preco">R$ 64,90</div>
-
-<a class="comprar"
-href="https://wa.me/5534992834995?text=Olá!%20Tenho%20interesse%20na%20Bata%20Helena."
-target="_blank">
-Comprar pelo WhatsApp
-</a>
-</div>
 
 </div>
+
 </section>
 
-<section class="info">
 
-<h2>💗 Compre com a gente</h2>
+<section class="produtos" id="novidades">
 
-<p>💳 Pix e cartões</p>
-<p>📦 Enviamos para todo o Brasil</p>
-<p>🛵 Entregas em Uberlândia via Motoboy/Uber</p>
-<p>💬 Atendimento personalizado pelo WhatsApp</p>
+<div class="titulo-secao">
+<small>Acabou de chegar</small>
+<h2>Novidades</h2>
+</div>
+
+<div class="produtos-grid">
+
+<article class="produto">
+
+<div class="produto-imagem">
+Foto do produto
+</div>
+
+<div class="produto-info">
+
+<div class="produto-nome">
+Top Tube
+</div>
+
+<div class="produto-preco">
+R$ 39,90
+</div>
+
+<a
+href="https://wa.me/SEU_NUMERO_AQUI?text=Olá!%20Tenho%20interesse%20no%20Top%20Tube."
+class="comprar"
+target="_blank">
+Comprar pelo WhatsApp
+</a>
+
+</div>
+
+</article>
+
+
+<article class="produto">
+
+<div class="produto-imagem">
+Foto do produto
+</div>
+
+<div class="produto-info">
+
+<div class="produto-nome">
+Cropped Manga Nula
+</div>
+
+<div class="produto-preco">
+R$ 44,90
+</div>
+
+<a
+href="https://wa.me/SEU_NUMERO_AQUI?text=Olá!%20Tenho%20interesse%20no%20Cropped%20Manga%20Nula."
+class="comprar"
+target="_blank">
+Comprar pelo WhatsApp
+</a>
+
+</div>
+
+</article>
+
+
+<article class="produto">
+
+<div class="produto-imagem">
+Foto do produto
+</div>
+
+<div class="produto-info">
+
+<div class="produto-nome">
+Cropped Laila
+</div>
+
+<div class="produto-preco">
+R$ 59,90
+</div>
+
+<a
+href="https://wa.me/SEU_NUMERO_AQUI?text=Olá!%20Tenho%20interesse%20no%20Cropped%20Laila."
+class="comprar"
+target="_blank">
+Comprar pelo WhatsApp
+</a>
+
+</div>
+
+</article>
+
+
+<article class="produto">
+
+<div class="produto-imagem">
+Foto do produto
+</div>
+
+<div class="produto-info">
+
+<div class="produto-nome">
+Cropped Agnes
+</div>
+
+<div class="produto-preco">
+R$ 59,99
+</div>
+
+<a
+href="https://wa.me/SEU_NUMERO_AQUI?text=Olá!%20Tenho%20interesse%20no%20Cropped%20Agnes."
+class="comprar"
+target="_blank">
+Comprar pelo WhatsApp
+</a>
+
+</div>
+
+</article>
+
+</div>
 
 </section>
+
+
+<section class="frase">
+
+<h2>Vista seu poder.</h2>
+
+<p>
+Seu estilo. Sua personalidade. Sua melhor versão.
+</p>
+
+</section>
+
+
+<section class="produtos" id="destaques">
+
+<div class="titulo-secao">
+<small>Escolhas da Giovanna</small>
+<h2>Mais procurados</h2>
+</div>
+
+<div class="produtos-grid">
+
+<article class="produto">
+<div class="produto-imagem">Foto do produto</div>
+
+<div class="produto-info">
+<div class="produto-nome">Regata Júlia</div>
+<div class="produto-preco">R$ 49,99</div>
+
+<a
+href="https://wa.me/SEU_NUMERO_AQUI?text=Olá!%20Tenho%20interesse%20na%20Regata%20Júlia."
+class="comprar"
+target="_blank">
+Comprar pelo WhatsApp
+</a>
+</div>
+</article>
+
+
+<article class="produto">
+<div class="produto-imagem">Foto do produto</div>
+
+<div class="produto-info">
+<div class="produto-nome">Bata Helena</div>
+<div class="produto-preco">R$ 64,90</div>
+
+<a
+href="https://wa.me/SEU_NUMERO_AQUI?text=Olá!%20Tenho%20interesse%20na%20Bata%20Helena."
+class="comprar"
+target="_blank">
+Comprar pelo WhatsApp
+</a>
+</div>
+</article>
+
+
+<article class="produto">
+<div class="produto-imagem">Foto do produto</div>
+
+<div class="produto-info">
+<div class="produto-nome">Cropped Laila Amarelo</div>
+<div class="produto-preco">R$ 59,90</div>
+
+<a
+href="https://wa.me/SEU_NUMERO_AQUI?text=Olá!%20Tenho%20interesse%20no%20Cropped%20Laila%20Amarelo."
+class="comprar"
+target="_blank">
+Comprar pelo WhatsApp
+</a>
+</div>
+</article>
+
+
+<article class="produto">
+<div class="produto-imagem">Foto do produto</div>
+
+<div class="produto-info">
+<div class="produto-nome">Cropped Laila Preto</div>
+<div class="produto-preco">R$ 59,90</div>
+
+<a
+href="https://wa.me/SEU_NUMERO_AQUI?text=Olá!%20Tenho%20interesse%20no%20Cropped%20Laila%20Preto."
+class="comprar"
+target="_blank">
+Comprar pelo WhatsApp
+</a>
+</div>
+</article>
+
+</div>
+
+</section>
+
+
+<section class="informacoes">
+
+<div class="info">
+<h3>Pagamento</h3>
+<p>PIX e cartões.</p>
+</div>
+
+<div class="info">
+<h3>Entrega</h3>
+<p>Enviamos para todo o Brasil. Em Uberlândia, entregamos via Motouber.</p>
+</div>
+
+<div class="info">
+<h3>Atendimento</h3>
+<p>Finalize sua compra diretamente pelo WhatsApp.</p>
+</div>
+
+</section>
+
+</main>
+
 
 <footer>
-© 2026 Use Giovanna Sabino • Vista seu poder 🔥
+
+<h2>Use Giovanna Sabino</h2>
+
+<p>Vista seu poder.</p>
+
+<a
+href="https://wa.me/SEU_NUMERO_AQUI"
+target="_blank"
+class="instagram">
+Fale conosco pelo WhatsApp
+</a>
+
 </footer>
 
 </body>
 </html>
-
 
